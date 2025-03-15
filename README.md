@@ -22,7 +22,7 @@
 ## PRAKTIKUM 3
 
 ## 1. Tampilan terminal setelah dieksekusi 
-![Screenshot 2025-03-15 162110](https://github.com/user-attachments/assets/bbda2d0d-0ca4-4351-b16c-60792973f78e)
+![image](https://github.com/user-attachments/assets/8fe20909-2b1a-40c4-93a8-7b79981baf73)
 
 ## 2. Tampilan nim-todo.test/todo
 ![image](https://github.com/user-attachments/assets/9331234b-e2c3-4e8a-8f39-83a6ff766d63)
