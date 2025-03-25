@@ -1,23 +1,25 @@
-<x-app-layout>
+@extends('layouts.app')
 
-    <x-slot name="header">
-
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Todo') }}
-            
-</h2>
-</x-slot>
-
-<div class="py-12">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-            <div class="p-6 text-gray-900 dark:text-gray-100">
-                {{ __("Index Todo Page")}}
-
-            </div>
-        </div>
-    </div>
+@section('content')
+<div class="container">
+    <h2>Daftar Todos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Judul</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($todos as $todo)
+            <tr>
+                <td>{{ $todo->id }}</td>
+                <td>{{ $todo->title }}</td>
+                <td>{{ $todo->status ?? '-' }}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
-
-</x-app-layout>
-
+@endsection

@@ -25,4 +25,6 @@ Route::get('/todo/create', [TodoController::class, 'create']) ->name('todo.creat
 Route::get('/todo/edit', [TodoController::class, 'edit']) ->name('todo.edit');
 
 Route::get('/user', [UserController::class, 'index']) ->name('user.index');
+
+Route::get('/todos', [TodoController::class, 'index']);
 require __DIR__.'/auth.php';
