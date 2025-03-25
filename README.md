@@ -1,3 +1,5 @@
+## PRAKTIKUM 2
+
 ## 1. Instalasi Breeze
 ![Screenshot 2025-03-08 144854](https://github.com/user-attachments/assets/fba98639-425a-4e85-8e58-b6193778442f)
 ![Screenshot 2025-03-08 144906](https://github.com/user-attachments/assets/6129df47-c630-4dae-8019-93a3c469539f)
@@ -14,3 +16,28 @@
 
 ## 5. Database (phpMyAdmin / HeidiSQL)
 ![Screenshot 2025-03-08 204716](https://github.com/user-attachments/assets/e5f5faed-2d09-4c05-ba7b-fd9f357abf9a)
+
+
+
+## PRAKTIKUM 3
+
+## 1. Tampilan terminal setelah dieksekusi 
+![image](https://github.com/user-attachments/assets/8fe20909-2b1a-40c4-93a8-7b79981baf73)
+
+## 2. Tampilan nim-todo.test/todo
+![image](https://github.com/user-attachments/assets/9331234b-e2c3-4e8a-8f39-83a6ff766d63)
+
+## 3. Tampilan nim-todo.test/user
+![image](https://github.com/user-attachments/assets/5e6977f9-d9da-46d8-b817-4306801ec209)
+
+## 4. Tampilan Mobile View User
+![image](https://github.com/user-attachments/assets/1b20322f-940c-4452-87e1-c90675596741)
+
+## 5. Tampilan Mobile View Todo 
+![image](https://github.com/user-attachments/assets/bcd5b697-b8e0-4440-bb44-614594809ca1)
+
+
+
+
+
+
