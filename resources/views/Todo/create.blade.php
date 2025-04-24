@@ -1,41 +1,46 @@
 <x-app-layout>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        @vite('resources/css/app.css')
+    </head>
+
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-
+        200">
             {{ __('Todo') }}
         </h2>
     </x-slot>
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg
+                dark:bg-gray-800">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <h3 class="text-lg font-semibold mb-4">Create New Todo</h3>
-
-                    <form action="{{ route('todo.store') }}" method="POST">
+                    <form method="POST" action="{{ route('todo.store') }}">
                         @csrf
-                        
-                        <!-- Input Title -->
-                        <div class="mb-4">
-                            <label class="block text-gray-200">Title</label>
-                            <input type="text" name="title" required 
-                                   class="w-full p-2 border rounded-md text-black">
+                        @method('POST')
+                        <div class="mb-6">
+                            <x-input-label for="title" :value="__('Title')" />
+                            <x-text-input id="title" name="title" type="text" class="block
+w-full mt-1" required autofocus autocomplete="title" />
+                            <x-input-error class="mt-2" :messages="$errors->get('title')" />
                         </div>
-
-                        <!-- Select is_done -->
-                        <div class="mb-4">
-                            <label class="block text-gray-200">Status</label>
-                            <select name="is_done" class="w-full p-2 border rounded-md text-black">
-                                <option value="0">Belum Selesai</option>
-                                <option value="1">Selesai</option>
-                            </select>
+                        <div class="flex items-center gap-4">
+                            <x-primary-button>{{ __('Save') }}</x-primary-button>
+                            <a href="{{ route('todo.index') }}" class="inline-flex items-center px-4 py-2 text-xs fonst-
+                            semibold tracking-widest
+                            text-gray-700 uppercase transition duration-150 ease-in-out
+                            bg-white border
+                            border-gray-300 rounded-md shadow-sm dark:bg-gray-800
+                            dark:border-gray-500
+                            dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700
+                            focus:outline-none focus:ring-2
+                            focus:ring-indigo-500 focus:ring-ffset-2 dark:focus:ring-
+                            offset-gray-800
+                            disabled:opacity-25">{{ __('Cancel') }}</a>
                         </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md">
-                            Tambah Todo
-                        </button>
                     </form>
-
                 </div>
             </div>
         </div>
