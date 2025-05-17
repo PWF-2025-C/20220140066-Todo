@@ -47,7 +47,7 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-            'is_admin' => 'boolean', // ✅ tambahkan ini juga
+            'is_admin' => 'boolean',
         ];
     }
 }

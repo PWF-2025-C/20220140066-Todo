@@ -9,13 +9,11 @@ use Illuminate\Support\Facades\Auth;
 class CategoryController extends Controller
 {
     public function index()
-{
-    $categories = Category::withCount(['todos' => function ($query) {
-        $query->where('user_id', Auth::id());
-    }])->get();
-
-    return view('category.index', compact('categories'));
-}
+    {
+        // Perbaikan di sini: dari 'todo' menjadi 'todos'
+        $categories = Category::with('todos')->where('user_id', Auth::id())->get();
+        return view('category.index', compact('categories'));
+    }
 
     public function create()
     {
@@ -23,19 +21,18 @@ class CategoryController extends Controller
     }
 
     public function store(Request $request)
-{
-    $request->validate([
-        'title' => 'required|string|max:255',
-    ]);
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+        ]);
 
-    Category::create([
-        'title' => ucfirst($request->title),
-        'user_id' => Auth::id(),
-    ]);
+        Category::create([
+            'title' => ucfirst($request->title),
+            'user_id' => Auth::id(),
+        ]);
 
-    return redirect()->route('category.index')->with('success', 'Category created successfully!');
-}
-
+        return redirect()->route('category.index')->with('success', 'Category created successfully!');
+    }
 
     public function edit(Category $category)
     {
